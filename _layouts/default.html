@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+    {% include head.html %}
+    <body>
+        <button onclick="topFunction()" id="topBtn" class="shadow" title="Go to top"><i class="fa fa-angle-up" aria-hidden="true"></i></button>
+        <div class="page-content animated fadeIn">
+          <section class="section-gradient text-white">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md text-center">
+                        <h1>{{ site.person }}</h1>
+                        <p>{{ site.heading }}</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md text-center">
+                        <p>{{ site.phone }}</p>
+                    </div>
+                    <div class="col-md text-center">
+                        <p>{{ site.email }}</p>
+                    </div>
+                    <div class="col-md text-center">
+                        <p>{{ site.portfolio }}</p>
+                    </div>
+                </div>  
+            </div>
+          </section>
+          <section>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md">
+                        <h2>About Me</h2>
+                        {{ content }}
+                        <h2>Skills</h2>
+                        {% for skills in site.data.skills-list %}
+                            <div class="skills-label">{{ skills.name }}</div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md">
+                        <h2>Experiences</h2>
+                            {% include cv-layout.html type="Experiences" %}
+                        <h2>Volunteering</h2>
+                            {% include cv-layout.html type="Volunteering" %}
+                        <h2>Education</h2>
+                            {% include cv-layout.html type="Education" %}
+                        <h2>Certifications</h2>
+                        {% assign sorted =  site.data.cert | sort: "expiry" | reverse %}
+                        {% for cert in sorted %}
+                            <p><span class="text-primary">{{ cert.name }}</span> - Valid until {{ cert.expiry | date: "%b %Y" }}</p>
+                        {% endfor %}
+                        <h2>Projects</h2>
+                        {% include cv-layout.html type="Projects" %}
+                        <h2>References</h2>
+                        {% for reference in site.data.references %}
+                            <h5>{{ reference.name }}</h5>
+                            <h6>{{ reference.company }}</h6>
+                            <p>{{ reference.phone }}</p>
+                            <p>{{ reference.email }}</p>
+                        {% endfor %}
+                        <h2>Languages</h2>
+                        {% for language in site.data.languages %}
+                            <h5>{{ language.name }}</h5>
+                            <p>{{ language.status }}</p>
+                        {% endfor %}
+                        <h2>Working Rights</h2>
+                        {% for working in site.data.working %}
+                            <h5>{{ working.country }}</h5>
+                            <p>{{ working.status }}</p>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+          </section>
+        </div>
+    </body>
+</html>

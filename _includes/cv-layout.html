@@ -1,0 +1,24 @@
+{% assign sorted = site._cv | sort: "end" | reverse %}
+{% for cv in sorted %}
+{% if cv.type == include.type %}
+    <div class="row">
+        <div class="col-md-3">
+            <p>
+                {% if cv.start %}
+                    {{ cv.start | date: "%b %Y" }} - 
+                {% endif %}
+                {% if cv.current == true %}
+                    Present
+                {% else %}
+                    {{ cv.end | date: "%b %Y" }}
+                {% endif %}
+            </p>
+        </div>
+        <div class="col-md">
+            <h5>{{ cv.title }}</h5>
+            <h6>{% if cv.company %}{{ cv.company }} | {% endif %}{% if cv.city %}{{ cv.city }}{% endif %}</h6>
+            {{ cv.content }}
+        </div>
+    </div>
+{% endif %}
+{% endfor %}

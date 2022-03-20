@@ -9,4 +9,4 @@ current:
 ---
 - Learned the core principles and methodologies of UX design to create usable and desirable digital products. 
 - Understood key aspects of UX research, empathy mapping, personas, usability testing, Axure, Balsamiq, Sketch, visual design principles, customer journeys, navigation, user flows. 
-- Designed and presented 1 personal project to the instructor.
+- Designed and presented 1 personal project to the instructor as the requirement for completing the course.

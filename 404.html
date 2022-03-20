@@ -5,11 +5,11 @@ title: Page Not Found (404)
 ---
 <div class="notfoundpage">
   <div class="container-xl text-center">
-    <p><img src="{{ site.logo-reg }}" class="logo-large" alt="Site logo"></p>
+    <p><img src="{{ site.logo-reg | prepend: site.baseurl }}" class="logo-large" alt="Site logo"></p>
     <h1>Ouch!</h1>
     <p>The page you were looking is not available. Check the url and try again.</p>
     <div>
-        <a href="/" class="btn btn-lg btn-primary">Take me to homepage</a>
+        <a href="{{ "/" | prepend: site.baseurl }}" class="btn btn-lg btn-primary">Take me to homepage</a>
     </div> 
   </div>
 </div>

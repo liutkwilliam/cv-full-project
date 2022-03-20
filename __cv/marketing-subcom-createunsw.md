@@ -10,5 +10,5 @@ current:
 Contributed the student club's Media and Marketing tasks include
 - Club branding alignment and refreshing design
 - Event Photography for nearly most of the workshops, activities, projects.
-- While I am also learning new skills in Arduino, CAD.
+- Learnt new skills in Arduino, Fusion 360 CAD software.
 - Revamped the website with refreshing layout design, coded with HTML & CSS and Jekyll scripting at the beginning of 2019.

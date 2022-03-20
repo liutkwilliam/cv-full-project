@@ -9,5 +9,5 @@ current:
 ---
 - Involved in brainstorming and discussing potential sculptural and installation ideas with other volunteers, through a series of activities. Followed by a weekend bump-in to assist installing artworks across the UNSW Lower Campus.
 - Delivered a projection mapping artwork for the Launch Party at the UNSW Roundhouse
-- Representing CREATE UNSW & MAKE CLUB to bring back SYNERGY (Vivid Sydney 2018 Entry) back for showcasing at the grass located between Dalton Building and Science Theatre.
+- Represented CREATE UNSW & MAKE CLUB student clubs to bring back SYNERGY (Vivid Sydney 2018 Entry) back for showcasing at the grass located between Dalton Building and Science Theatre.
 - Appointed to photograph some events and the launch party.

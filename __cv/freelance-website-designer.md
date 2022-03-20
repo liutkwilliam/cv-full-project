@@ -1,10 +1,10 @@
 ---
 title: Freelance Website Designer
-company: Myself
-city: Remote
+company: Self employed
+city: Sydney NSW (Remote)
 type: Experiences
 start: 2020-08-20 00:00 +10:00
-end: Present
+end: 2021-12-31 00:00 +10:00
 current:
 ---
 - Curated and deliver website design based on clients' requirements
@@ -14,3 +14,4 @@ current:
 - Provided professional advice on delivering website content
 - Completed Projects
     - Oct 2021 - Nobility Care Australia
+    - Dec 2021 - MSPB Management Consulting

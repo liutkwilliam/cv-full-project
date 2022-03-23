@@ -122,7 +122,7 @@ header {
     outline: none;
     background-image: $diagonal-bg;
     background-color: $primary;
-    color: $white;
+    color: $light;
     cursor: pointer;
     padding: 0.6rem 1.25rem;
     border-radius: 1rem 0 0 1rem;
@@ -227,6 +227,23 @@ header {
     background-image: $diagonal-bg;
 }
 
+/* The progress container (grey background) */
+.progress-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    background: $light;
+  }
+  
+  /* The progress bar (scroll indicator) */
+  .progress-bar {
+    height: 8px;
+    background: $primary;
+    width: 0%;
+  }
+
 // social buttons
 .fa {
     &:hover {
@@ -277,7 +294,7 @@ footer {
         bottom: 0;
         z-index: 1;
         p, a {
-            color: $white!important;
+            color: $light!important;
         }
     }
     p {
@@ -295,6 +312,12 @@ footer {
 /////////
 // CV //
 ///////
+
+
+.web a {
+    color: $light;
+    text-decoration: underline;
+}
 
 .skills-label {
     display: inline-block;

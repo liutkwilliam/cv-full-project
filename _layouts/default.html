@@ -16,11 +16,11 @@
                     <div class="col-md text-center">
                         <p>{{ site.phone }}</p>
                     </div>
-                    <div class="col-md text-center">
-                        <p>{{ site.email }}</p>
+                    <div class="col-md text-center web">
+                        <a href="mailto:{{ site.email }}">{{ site.email }}</a>
                     </div>
-                    <div class="col-md text-center">
-                        <p>{{ site.portfolio }}</p>
+                    <div class="col-md text-center web">
+                        <a href="{{ site.portfolio }}">{{ site.portfolio }}</a>
                     </div>
                 </div>  
             </div>
@@ -30,7 +30,7 @@
                 <div class="row">
                     <div class="col-md">
                         <h2>About Me</h2>
-                        {{ content }}
+                        <p>{{ content }}</p>
                         <h2>Skills</h2>
                         {% for skills in site.data.skills-list %}
                             <div class="skills-label">{{ skills.name }}</div>
@@ -47,20 +47,25 @@
                             {% include cv-layout.html type="Volunteering" %}
                         <h2>Education</h2>
                             {% include cv-layout.html type="Education" %}
-                        <h2>Certifications</h2>
-                        {% assign sorted =  site.data.cert | sort: "expiry" | reverse %}
-                        {% for cert in sorted %}
-                            <p><span class="text-primary">{{ cert.name }}</span> - Valid until {{ cert.expiry | date: "%b %Y" }}</p>
-                        {% endfor %}
                         <h2>Projects</h2>
                         {% include cv-layout.html type="Projects" %}
+                        <h2>Certifications</h2>
+                            <ul>
+                                {% assign sorted =  site.data.cert | sort: "expiry" | reverse %}
+                                {% for cert in sorted %}
+                                <li>
+                                    <span class="text-primary">{{ cert.name }}</span> - Valid until {{ cert.expiry | date: "%b %Y" }}
+                                </li>
+                                {% endfor %}
+                            </ul>
                         <h2>References</h2>
-                        {% for reference in site.data.references %}
+                        <p>References can be provided upon request</p>
+                        <!-- {% for reference in site.data.references %}
                             <h5>{{ reference.name }}</h5>
                             <h6>{{ reference.company }}</h6>
                             <p>{{ reference.phone }}</p>
                             <p>{{ reference.email }}</p>
-                        {% endfor %}
+                        {% endfor %} -->
                         <h2>Languages</h2>
                         {% for language in site.data.languages %}
                             <h5>{{ language.name }}</h5>
@@ -75,6 +80,9 @@
                 </div>
             </div>
           </section>
+        </div>
+        <div class="progress-container">
+            <div class="progress-bar" id="myBar"></div>
         </div>
     </body>
 </html>
